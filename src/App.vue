@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Calculator</h1>
+    <MainCalculator />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainCalculator from "./main/MainCalculator"
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    components: { MainCalculator }
 }
 </script>
 
 <style>
+@font-face{
+    font-family: "RobotoMono";
+    src: url("./fonts/RobotoMono-VariableFont_wght.ttf");
+}
+
+* {
+    font-family: "RobotoMono", monospace;
+}
+
+body {
+    margin: 0;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFAFA;
+    background: linear-gradient(90deg, hsla(159, 35%, 45%, 1) 0%, hsla(176, 68%, 12%, 1) 100%);
 }
 </style>
